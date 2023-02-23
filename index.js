@@ -5,10 +5,11 @@ var router = express.Router();
 const multer = require("multer");
 const cookierParser= require('cookie-parser');
 const jwt = require('jsonwebtoken');
-
+app.set('views',path.join(__dirname,'views'))
 app.use(bodyParser.urlencoded({
   extended: true
 }))
+const path=require('path');
 app.set('view engine', 'ejs');
 app.use(cookierParser());
 app.use(express.static(__dirname + '/public'));
